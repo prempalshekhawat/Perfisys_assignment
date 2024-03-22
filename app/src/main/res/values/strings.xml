@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Perfisys assignment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="monthly_expenses_tracer">Monthly Expenses Tracer</string>
+    <string name="bold_item"><b>Item: </b></string>
+    <string name="bold_price"><b>Price: </b></string>
+    <string name="bold_paid_by"><b>Paid By: </b></string>
+    <string name="greeting"><![CDATA[<b>Hello %s!</b><br>]]>This is newline</string>
+
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/container_fragment">
+
+    <fragment
+        android:id="@+id/container_fragment"
+        android:name="com.prempal.perfisysassignment.ui.fragments.ContainerFragment"
+        android:label="Container"
+        tools:layout="@layout/fragment_container">
+
+        <action
+            android:id="@+id/action_container_fragment_to_splitify_home_fragment"
+            app:destination="@id/splitify_home_fragment" />
+        <action
+            android:id="@+id/action_container_fragment_to_splitify_history_fragment"
+            app:destination="@id/splitify_history_fragment" />
+        <action
+            android:id="@+id/action_container_fragment_to_margh_home_fragment"
+            app:destination="@id/margh_home_fragment" />
+        <action
+            android:id="@+id/action_container_fragment_to_margh_profile_fragment"
+            app:destination="@id/margh_profile_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/splitify_home_fragment"
+        android:name="com.prempal.perfisysassignment.ui.fragments.SplitifyHomeFragment"
+        android:label="Splitify Home"
+        tools:layout="@layout/fragment_splitify_home">
+
+        <action
+            android:id="@+id/action_splitify_home_fragment_to_container_fragment"
+            app:destination="@id/container_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/splitify_history_fragment"
+        android:name="com.prempal.perfisysassignment.ui.fragments.SplitifyHistoryFragment"
+        android:label="Splitify History"
+        tools:layout="@layout/fragment_splitify_history">
+
+        <action
+            android:id="@+id/action_splitify_history_fragment_to_container_fragment"
+            app:destination="@id/container_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/margh_home_fragment"
+        android:name="com.prempal.perfisysassignment.ui.fragments.MarghHomeFragment"
+        android:label="Margh Home"
+        tools:layout="@layout/fragment_margh_home">
+
+        <action
+            android:id="@+id/action_margh_home_fragment_to_container_fragment"
+            app:destination="@id/container_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/margh_profile_fragment"
+        android:name="com.prempal.perfisysassignment.ui.fragments.MarghProfileFragment"
+        android:label="Margh Profile"
+        tools:layout="@layout/fragment_margh_profile">
+
+        <action
+            android:id="@+id/action_margh_profile_fragment_to_container_fragment"
+            app:destination="@id/container_fragment" />
+
+    </fragment>
+
+</navigation>

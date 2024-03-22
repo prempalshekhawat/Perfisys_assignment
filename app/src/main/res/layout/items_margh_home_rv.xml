@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="response"
+            type="com.prempal.perfisysassignment.data.MarghQuotesResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/quoteIv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/quoteOptionsCv"
+        android:padding="5dp"
+        android:src="@color/white"
+        app:imageUrl="@{response.imageUrl}"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/quoteOptionsCv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/saveQuoteIv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/save_quote_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/saveQuoteTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:textSize="18sp"
+                android:textColor="@color/text_grey"
+                app:layout_constraintStart_toStartOf="@id/saveQuoteIv"
+                app:layout_constraintEnd_toEndOf="@id/saveQuoteIv"
+                app:layout_constraintTop_toBottomOf="@id/saveQuoteIv"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/shareQuoteIv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/share_quote_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/shareQuoteTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:textSize="18sp"
+                android:textColor="@color/text_grey"
+                app:layout_constraintStart_toStartOf="@id/shareQuoteIv"
+                app:layout_constraintEnd_toEndOf="@id/shareQuoteIv"
+                app:layout_constraintTop_toBottomOf="@id/shareQuoteIv"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/downloadQuoteIv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/download_quote_icon"
+                app:layout_constraintStart_toEndOf="@+id/saveQuoteIv"
+                app:layout_constraintEnd_toStartOf="@id/shareQuoteIv"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/downloadQuoteTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Download"
+                android:textSize="18sp"
+                android:textColor="@color/text_grey"
+                app:layout_constraintStart_toStartOf="@id/downloadQuoteIv"
+                app:layout_constraintEnd_toEndOf="@id/downloadQuoteIv"
+                app:layout_constraintTop_toBottomOf="@id/downloadQuoteIv"
+                android:gravity="center"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
